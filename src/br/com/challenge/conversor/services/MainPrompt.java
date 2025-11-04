@@ -29,7 +29,7 @@ public class MainPrompt {
             System.out.println("Select Option :");
             System.out.println("----------------------------------------");
             System.out.println(" 1 - Default Currencies");
-            System.out.println(" 2 - Dinamic selection currencies");
+            System.out.println(" 2 - Dynamic selection currencies");
             System.out.println(" 3 - List currencies");
             System.out.println(" 4 - Exit program");
             System.out.println("----------------------------------------");
