@@ -1,14 +1,13 @@
 package br.com.challenge.conversor.services;
 
 import br.com.challenge.conversor.models.Currency;
-import br.com.challenge.conversor.models.PairConvertion;
+import br.com.challenge.conversor.models.PairConversion;
 import br.com.challenge.conversor.repository.CurrencyRepository;
 import br.com.challenge.conversor.utils.ConsoleUtil;
 import br.com.challenge.conversor.utils.ConvertOutput;
 
 import java.net.http.HttpResponse;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -121,7 +120,7 @@ public class DefaultCurrencies {
                 ApiConversion apiConvertion = new ApiConversion();
                 HttpResponse<String> response = apiConvertion.convertPair("BRL", selectedCurrency.code());
 
-                PairConvertion pairConvertion = ConvertOutput.stringToObject(response);
+                PairConversion pairConvertion = ConvertOutput.stringToObject(response);
 
 
                 System.out.printf("\u001B[1;33m%-50s\u001B[0m | %-25s%n",
