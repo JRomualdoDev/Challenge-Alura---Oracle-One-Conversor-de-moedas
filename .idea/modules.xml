@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
-      <module fileurl="file://$PROJECT_DIR$/.idea/Challenge-Alura---Oracle-One-Conversor-de-moedas.iml" filepath="$PROJECT_DIR$/.idea/Challenge-Alura---Oracle-One-Conversor-de-moedas.iml" />
-=======
-      <module fileurl="file://$PROJECT_DIR$/Challenge Alura - Oracle one.iml" filepath="$PROJECT_DIR$/Challenge Alura - Oracle one.iml" />
->>>>>>> origin/master
+      <module fileurl="file://$PROJECT_DIR$/Challenge-Alura---Oracle-One-Conversor-de-moedas.iml" filepath="$PROJECT_DIR$/Challenge-Alura---Oracle-One-Conversor-de-moedas.iml" />
     </modules>
   </component>
 </project>
