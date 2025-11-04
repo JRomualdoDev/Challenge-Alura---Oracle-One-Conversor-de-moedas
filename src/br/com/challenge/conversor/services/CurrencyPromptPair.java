@@ -1,8 +1,9 @@
 package br.com.challenge.conversor.services;
 
 import br.com.challenge.conversor.models.Currency;
-import br.com.challenge.conversor.models.PairConvertion;
+import br.com.challenge.conversor.models.PairConversion;
 import br.com.challenge.conversor.repository.CurrencyRepository;
+import br.com.challenge.conversor.utils.ConsoleUtil;
 import br.com.challenge.conversor.utils.ConvertOutput;
 
 import java.net.http.HttpResponse;
@@ -30,6 +31,7 @@ public class CurrencyPromptPair {
             String coinBase = scanner.nextLine();
 
             if (coinBase == null || coinBase.trim().equalsIgnoreCase("exit")) {
+                ConsoleUtil.clearScreen();
                 break;
             }
 
@@ -67,7 +69,7 @@ public class CurrencyPromptPair {
                 String coinTarget = scanner.nextLine();
 
                 if (coinTarget == null || coinTarget.trim().equalsIgnoreCase("exit")) {
-                    System.out.println("Goodbye!");
+                    ConsoleUtil.clearScreen();
                     break;
                 }
 
@@ -117,10 +119,10 @@ public class CurrencyPromptPair {
                     ApiConversion apiConvertion = new ApiConversion();
                     HttpResponse<String> response = apiConvertion.convertPair(coinBaseCurrency.code(), coinTargetCurrency.code());
 
-                    PairConvertion pairConvertion = ConvertOutput.stringToObject(response);
+                    PairConversion pairConvertion = ConvertOutput.stringToObject(response);
 
 
-                    System.out.printf("\u001B[1;33m%-47s\u001B[0m | %-25s%n",
+                    System.out.printf("\u001B[1;33m%-50s\u001B[0m | %-25s%n",
                             "Conversion Rate",
                             "1 " + coinBaseCurrency.code() + " = " + pairConvertion.conversion_rate() + " " + coinTargetCurrency.code()
                     );
