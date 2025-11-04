@@ -49,6 +49,29 @@ O projeto está organizado da seguinte forma:
 *   `config.properties.example`: Arquivo de exemplo para configuração da API Key.
 *   `README.md`: Este arquivo.
 
+## Melhorias Futuras
+
+Este projeto pode ser expandido e melhorado de várias maneiras. Algumas ideias incluem:
+
+*   **Interface Gráfica (Frontend):**
+    *   **Web:** Criar uma interface web com HTML, CSS e JavaScript (usando frameworks como React, Vue ou Angular) que consome a lógica de conversão. O projeto poderia ser hospedado no GitHub Pages.
+    *   **Desktop:** Desenvolver uma aplicação desktop com JavaFX ou Swing para uma experiência mais robusta no sistema operacional.
+
+*   **Histórico de Conversões:**
+    *   Salvar as conversões realizadas em um arquivo local (CSV, JSON) ou em um banco de dados para consulta futura.
+
+*   **Logs de Eventos:**
+    *   Implementar um sistema de logs (com bibliotecas como Log4j ou SLF4J) para registrar eventos importantes da aplicação, como chamadas de API, erros e conversões realizadas. Isso facilitaria a depuração e monitoramento.
+
+*   **Cache de Taxas de Câmbio:**
+    *   Implementar um sistema de cache para armazenar as taxas de câmbio por um determinado período. Isso reduziria o número de chamadas à API, melhorando o desempenho e evitando exceder os limites do plano da API.
+
+*   **Mais Testes:**
+    *   Aumentar a cobertura de testes, incluindo testes de integração para a camada de serviço e a comunicação com a API (usando mocks).
+
+*   **Empacotamento da Aplicação:**
+    *   Criar um executável `.jar` (ou um instalador nativo com jpackage) para facilitar a distribuição e execução do aplicativo sem a necessidade de uma IDE.
+
 ## Contribuições
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
+Contribuições são bem-vindas! Sinta-se à vontade para escolher uma das melhorias futuras, abrir uma issue ou enviar um pull request.
