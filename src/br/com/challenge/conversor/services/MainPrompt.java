@@ -2,10 +2,10 @@ package br.com.challenge.conversor.services;
 
 import br.com.challenge.conversor.models.Currency;
 import br.com.challenge.conversor.repository.CurrencyRepository;
+import br.com.challenge.conversor.repository.HistoryConversionRepository;
 import br.com.challenge.conversor.utils.ConsoleUtil;
 
 import java.util.Collection;
-import java.util.Map;
 import java.util.Scanner;
 
 public class MainPrompt {
@@ -31,13 +31,14 @@ public class MainPrompt {
             System.out.println(" 1 - Default Currencies");
             System.out.println(" 2 - Dynamic selection currencies");
             System.out.println(" 3 - List currencies");
-            System.out.println(" 4 - Exit program");
+            System.out.println(" 4 - History conversion currencies");
+            System.out.println(" 5 - Exit program");
             System.out.println("----------------------------------------");
             System.out.print("Enter your choice: ");
 
             String select = sc.nextLine();
 
-            if (select == null || select.trim().equalsIgnoreCase("4")) {
+            if (select == null || select.equals("5") || select.trim().equalsIgnoreCase("exit")) {
                 System.out.println("Goodbye!");
                 break;
             }
@@ -54,6 +55,10 @@ public class MainPrompt {
                 case "3":
                     ConsoleUtil.clearScreen();
                     showAllListCurrencies();
+                    break;
+                case "4":
+                    ConsoleUtil.clearScreen();
+                    showHistory();
                     break;
                 default:
                     System.out.println("Select a valid option");
@@ -107,6 +112,12 @@ public class MainPrompt {
         System.out.println("...");
         sc.nextLine();
 
+        ConsoleUtil.clearScreen();
+    }
+
+    private static void showHistory() {
+
+        HistoryConversionRepository.readHistory();
         ConsoleUtil.clearScreen();
     }
 }
