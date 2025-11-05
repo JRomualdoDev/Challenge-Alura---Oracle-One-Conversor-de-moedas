@@ -29,7 +29,7 @@ https://v6.exchangerate-api.com/v6/YOUR_API_KEY/pair/BASE_CURRENCY/TARGET_CURREN
 
 1.  **Clone o repositório:**
     ```bash
-    git clone https://github.com/seu-usuario/Challenge-Alura---Oracle-One-Conversor-de-moedas.git
+    git clone https://github.com/JRomualdoDev/Challenge-Alura---Oracle-One-Conversor-de-moedas.git
     ```
 2.  **Configure a API Key:**
     *   Renomeie o arquivo `config.properties.example` para `config.properties`.
