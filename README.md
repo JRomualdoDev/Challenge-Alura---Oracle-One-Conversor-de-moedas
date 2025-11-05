@@ -15,6 +15,7 @@ Este é um aplicativo de console em Java que permite a conversão de valores ent
 *   **Conversão com moedas dinâmicas:** Escolha qualquer par de moedas para conversão.
 *   **Busca inteligente:** Encontre moedas por código, nome ou país.
 *   **Listagem de moedas:** Exiba uma lista de todas as moedas disponíveis.
+*   **Histórico de Conversões:** Salva todas as conversões realizadas em um arquivo local (`historyCurrencies.txt`) para consulta futura.
 
 ## Endpoint Utilizado
 
@@ -45,9 +46,10 @@ O projeto está organizado da seguinte forma:
     *   `client/`: Responsável pela comunicação com a API.
     *   `models/`: Contém os modelos de dados da aplicação.
     *   `repository/`: Responsável pelo acesso e manipulação dos dados das moedas.
-    *   `resources/`: Contém o arquivo `currencies.csv` com a lista de moedas.
+    *   `resources/`: Contém o arquivo `currencies.csv` com a lista de moedas e `historyCurrencies.txt` para o histórico de conversões.
     *   `services/`: Contém a lógica de negócio da aplicação.
     *   `utils/`: Contém classes utilitárias.
+*   `config.properties`: Arquivo para configuração da API Key.
 *   `config.properties.example`: Arquivo de exemplo para configuração da API Key.
 *   `README.md`: Este arquivo.
 
@@ -58,9 +60,6 @@ Este projeto pode ser expandido e melhorado de várias maneiras. Algumas ideias 
 *   **Interface Gráfica (Frontend):**
     *   **Web:** Criar uma interface web com HTML, CSS e JavaScript (usando frameworks como React, Vue ou Angular) que consome a lógica de conversão. O projeto poderia ser hospedado no GitHub Pages.
     *   **Desktop:** Desenvolver uma aplicação desktop com JavaFX ou Swing para uma experiência mais robusta no sistema operacional.
-
-*   **Histórico de Conversões:**
-    *   Salvar as conversões realizadas em um arquivo local (CSV, JSON) ou em um banco de dados para consulta futura.
 
 *   **Logs de Eventos:**
     *   Implementar um sistema de logs (com bibliotecas como Log4j ou SLF4J) para registrar eventos importantes da aplicação, como chamadas de API, erros e conversões realizadas. Isso facilitaria a depuração e monitoramento.
