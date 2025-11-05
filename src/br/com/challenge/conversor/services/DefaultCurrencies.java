@@ -3,6 +3,7 @@ package br.com.challenge.conversor.services;
 import br.com.challenge.conversor.models.Currency;
 import br.com.challenge.conversor.models.PairConversion;
 import br.com.challenge.conversor.repository.CurrencyRepository;
+import br.com.challenge.conversor.repository.HistoryConversionRepository;
 import br.com.challenge.conversor.utils.ConsoleUtil;
 import br.com.challenge.conversor.utils.ConvertOutput;
 
@@ -122,6 +123,8 @@ public class DefaultCurrencies {
 
                 PairConversion pairConvertion = ConvertOutput.stringToObject(response);
 
+                String historyMessage = "Conversion Rate Default, 1 BRL = " + pairConvertion.conversion_rate() + " " + selectedCurrency.code();
+                HistoryConversionRepository.save(historyMessage);
 
                 System.out.printf("\u001B[1;33m%-50s\u001B[0m | %-25s%n",
                         "Conversion Rate",
