@@ -3,6 +3,7 @@ package br.com.challenge.conversor.services;
 import br.com.challenge.conversor.models.Currency;
 import br.com.challenge.conversor.models.PairConversion;
 import br.com.challenge.conversor.repository.CurrencyRepository;
+import br.com.challenge.conversor.repository.HistoryConversionRepository;
 import br.com.challenge.conversor.utils.ConsoleUtil;
 import br.com.challenge.conversor.utils.ConvertOutput;
 
@@ -121,6 +122,8 @@ public class CurrencyPromptPair {
 
                     PairConversion pairConvertion = ConvertOutput.stringToObject(response);
 
+                    String historyMessage = "Conversion Rate Pair, 1 " + coinBaseCurrency.code() + " = " + pairConvertion.conversion_rate() + " " + coinTargetCurrency.code();
+                    HistoryConversionRepository.save(historyMessage);
 
                     System.out.printf("\u001B[1;33m%-50s\u001B[0m | %-25s%n",
                             "Conversion Rate",
@@ -133,7 +136,6 @@ public class CurrencyPromptPair {
             }
         }
 
-//        scanner.close();
     }
 
     private String truncate(String text, int maxLength) {
