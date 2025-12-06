@@ -2,7 +2,7 @@
 
 ![Currency Conversion GIF](assets/images/CurrencyConversion.gif)
 
-Este é um aplicativo de console em Java que permite a conversão de valores entre diferentes moedas. Ele utiliza a API da [ExchangeRate-API](https://www.exchangerate-api.com/) para obter as taxas de câmbio mais recentes.
+Este é um aplicativo de console em Java que permite a conversão de valores entre diferentes moedas. Ele utiliza a API da [ExchangeRate-API](https://www.exchangerate-api.com/) para obter as taxas de câmbio mais recentes..
 
 ## Tecnologias Utilizadas
 
